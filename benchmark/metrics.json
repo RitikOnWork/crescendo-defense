@@ -1,0 +1,12 @@
+{
+  "total_sessions": 13,
+  "attack_sessions_count": 10,
+  "benign_sessions_count": 3,
+  "total_turns_processed": 55,
+  "jailbreak_success_rate": 0.0,
+  "false_positive_rate": 0.0,
+  "defense_intervention_rate": 0.0,
+  "avg_latency_seconds": 0.00022918094288219105,
+  "avg_threat_score": 0.010758181818181818,
+  "avg_first_intervention_turn": -1.0
+}

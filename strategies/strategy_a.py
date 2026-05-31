@@ -277,9 +277,28 @@ class StrategyA:
         return result
 
 
+class ContextCondensationStrategy(StrategyA):
+    """Context condensation / reset defense wrapper for pipeline integration."""
+    def __init__(self, config: Optional[Any] = None) -> None:
+        super().__init__()
+        self.config = config
+
+    def apply(
+        self,
+        conversation_history: List[Dict[str, str]],
+        current_user_prompt: str,
+    ) -> tuple[List[Dict[str, str]], str]:
+        """Wrapper apply method to match pipeline interface."""
+        # When triggered by the pipeline, the threat is high, so we perform a reset
+        threat_score = 0.8
+        cleansed_history = super().apply(conversation_history, threat_score)
+        return cleansed_history, current_user_prompt
+
+
 # ---------------------------------------------------------------------------
 # __main__ — usage demonstration
 # ---------------------------------------------------------------------------
+
 
 if __name__ == "__main__":
     import json

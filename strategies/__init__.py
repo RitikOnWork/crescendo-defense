@@ -1,5 +1,5 @@
-"""Defense mitigation strategies to handle detected Crescendo escalation triggers."""
 from .strategy_a import ContextCondensationStrategy
-from .strategy_b import BacktrackingPerturbationStrategy
+from .strategy_b import BacktrackingPerturbationStrategy, StrategyB
 
-__all__ = ["ContextCondensationStrategy", "BacktrackingPerturbationStrategy"]
+__all__ = ["ContextCondensationStrategy", "BacktrackingPerturbationStrategy", "StrategyB"]
+

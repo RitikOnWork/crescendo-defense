@@ -156,6 +156,18 @@ Our final evaluation across all 10 multi-turn attack vectors under each conditio
 - **Minimal Resource Footprint**: Strategy B introduces a minor, highly efficient **36.0 token overhead** per turn on average, which only triggers when threat levels rise.
 - **High Precision**: The `EscalationDetector` did not trigger any false positives (0% FPR) when evaluated against benign instructions from the `argilla/dpo-mix-7k` dataset.
 
+### Visualized Metrics & Charts
+Below are the key analytical plots generated from our benchmark run (stored in [results_charts](file:///e:/Code%20PlayGround/Crescendo%20Defense/results_charts)):
+
+#### 1. Overall ASR Comparison
+![Overall ASR Baseline vs Defense Strategies](results_charts/Overall%20ASR%20Baseline%20vs%20Defense%20Strategies.png)
+
+#### 2. Attack Success per Category and Strategy
+![Attack Success per Category and Strategy](results_charts/Attack%20Success%20per%20Category%20and%20Strategy.png)
+
+#### 3. Escalation Detector Max Threat Score per Attack Vector
+![Escalation Detector Max Threat Score per Attack Vector](results_charts/Escalation%20Detector%20Max%20Threat%20Score%20per%20Attack%20Vector.png)
+
 ---
 
 ## 🧠 Defense Strategies Explained in Plain English
